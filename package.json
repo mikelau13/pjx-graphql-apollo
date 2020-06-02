@@ -1,0 +1,18 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon ./src/server.ts",
+    "start": "node dist/server.js",
+    "docker:exec": "docker exec -it graphql-apollo-dev /bin/bash"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2"
+  },
+  "dependencies": {
+    "apollo-server": "^2.14.1",
+    "graphql": "^15.0.0",
+    "typescript": "^3.9.3"
+  }
+}
