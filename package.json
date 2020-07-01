@@ -3,7 +3,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon ./src/server.ts",
-    "start": "node dist/server.js",
+    "start": "nodemon -L --exec node --inspect=4555 -r ts-node/register --preserve-symlinks src/server.ts",
+    "start:prod": "pm2-runtime ./dist/server.js",
     "docker:exec": "docker exec -it graphql-apollo-dev /bin/bash"
   },
   "devDependencies": {

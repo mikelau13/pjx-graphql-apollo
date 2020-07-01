@@ -1,7 +1,7 @@
 # base image
 FROM node:10-slim
 
-WORKDIR /usr/api
+WORKDIR /home/node
 
 COPY package.json .
 COPY package-lock.json .

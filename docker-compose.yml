@@ -6,7 +6,7 @@ services:
   graphql:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+    #  dockerfile: Dockerfile.dev
     container_name: pjx-graphql-apollo-dev
     command: npm run dev
     volumes:
