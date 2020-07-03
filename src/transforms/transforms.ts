@@ -7,11 +7,11 @@ export const transformCity = (result: any = {}) => {
 };
 
 export const transformCities = (results: any = {}) => {
-  if (!Array.isArray(results.items)) {
+  if (!Array.isArray(results)) {
     return [];
   }
 
-  return results[0].cities.map(item => {
+  return results.map(item => {
     return transformCity(item);
   });
 };
