@@ -7,7 +7,7 @@ import PjxRESTDataSource from './PjxRESTDataSource';
 export default class NodeAPI extends PjxRESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://pjx-api:8081/api/1';
+    this.baseURL = process.env.NODE_API_ENDPOINT;
   }
 
   async getAllCities() {

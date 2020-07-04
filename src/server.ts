@@ -1,4 +1,5 @@
 
+import 'dotenv/config';
 import { ApolloServer, gql, IResolvers } from 'apollo-server';
 import { CACHE_TIMES } from './constants';
 import logger from 'winston';
@@ -79,5 +80,6 @@ const server = new ApolloServer({
 
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
+  console.log(`NODE_API_ENDPOINT = ${process.env.NODE_API_ENDPOINT}`);
   console.log(`🚀  Server ready at ${url}`);
 });
