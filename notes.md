@@ -32,7 +32,7 @@ docker-compose --version
 npm install apollo-server graphql
 
 
-Try a simple query on the playground:
+Try a simple query on the playground - http://localhost:4000/:
 
 ```
 {
@@ -42,11 +42,13 @@ Try a simple query on the playground:
 }
 ```
 ```
+{
   cities {
     id
     name
     city
   }
+ }
 ```
 ```
   city(id:"1"){
