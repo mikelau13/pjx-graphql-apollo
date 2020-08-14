@@ -1,5 +1,15 @@
 # pjx-graphql-apollo
 
+This project is one of the components of the `pjx` application, please check [pjx-root](https://github.com/mikelau13/pjx-root) for more details.
+
+## Dependencies
+
+- [pjx-api-node](https://github.com/mikelau13/pjx-api-node) - the API that this Apollo Server is consuming
+
+For the real world problem, GraphQL is powerful for a more complex infrastructure, such that a company with many differenct API endpoints; however using GraphQL to connect to one and only one API might be overkilled depending on point of view.  
+
+I am using GraphQL here only for demo purpose; or I might add more APIs (self-developed or 3rd party) in the future.
+
 
 ## Project Tools
 
@@ -30,28 +40,4 @@ To stop your local server (container) run the following:
 
 ```bash
 docker-compose down
-```
-
-## Running bash commands from the container
-
-Run all bash(terminal) related commands from the `pjx-graphql-apollo-dev` container in the interactive terminal: 
-
-```bash
-# run from your computer's terminal
-npm run docker:exec
-```
-
-If successful you should see the following in your termianl:
-
-```bash
-# This is showing me logged in as root user.
-root@a0e9e0dd887b:/usr/api
-```
-
-By default your working directory should be the **graphql** server root directory `usr/api`.
-
-To exit the interactive terminal run the following:
-
-```bash
-exit
 ```
